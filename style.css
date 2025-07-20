@@ -2,51 +2,47 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   background: linear-gradient(120deg, #e6f4fc 0%, #fafdff 100%);
   margin: 0;
-  color: #174157;
+  color: #184060;
 }
 
 header {
   text-align: center;
-  padding: 30px 0 10px 0;
+  padding: 30px 0 12px 0;
   background: linear-gradient(90deg, #eaf7fc 60%, #f5fafb 100%);
   box-shadow: 0 2px 12px rgba(44,144,227,0.08);
 }
-
 .app-title {
   font-size: 2rem;
   font-weight: 800;
-  color: #2a8ec7;
-  letter-spacing: 2px;
-  margin: 0 0 3px 0;
-  text-shadow: 0 2px 7px #eaf6fd;
+  color: #2988de;
+  letter-spacing: 1.5px;
+  margin: 0 0 4px 0;
+  text-shadow: 0 2px 8px #eaf6fd;
 }
-
 .subtitle {
   color: #3582b0;
-  font-size: 1.08rem;
+  font-size: 1.13rem;
   font-weight: 700;
   letter-spacing: .04em;
-  margin: 0 0 2px 0;
+  margin-bottom: 0;
 }
-
 .instructions {
-  margin: 22px auto 8px auto;
-  background: #fbfcfd;
-  border: 1.5px solid #e5ebf7;
-  padding: 13px 13px;
+  margin: 24px auto 16px auto;
+  background: #fcfeff;
+  border: 1.5px solid #e3eef7;
+  padding: 16px 14px;
   border-radius: 10px;
-  font-size: 1.01rem;
-  color: #306899;
-  max-width: 555px;
+  font-size: 1.07rem;
+  color: #266ca3;
+  max-width: 600px;
   text-align: center;
   box-shadow: 0 1px 8px #e7f3fc;
 }
-
 #app {
   margin: 38px auto 0 auto;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 4px 36px rgba(46,128,217,0.15);
+  box-shadow: 0 4px 36px rgba(46,128,217,0.13);
   padding: 36px 18px 30px 18px;
   max-width: 570px;
   min-height: 510px;
@@ -58,13 +54,11 @@ ul {
   padding: 0;
   margin: 0 0 14px 0;
 }
-
 .unit-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 17px;
 }
-
 .unit {
   display: flex;
   align-items: center;
@@ -72,7 +66,7 @@ ul {
   background: linear-gradient(90deg, #eaf3fd 75%, #e0f9ff 100%);
   color: #2272ab;
   padding: 17px 12px 16px 18px;
-  border-radius: 9px;
+  border-radius: 10px;
   font-size: 1.16rem;
   font-weight: 700;
   cursor: pointer;
@@ -96,7 +90,7 @@ ul {
   transform: translateY(-2px) scale(1.013);
 }
 .unit.locked {
-  opacity: 0.5;
+  opacity: 0.52;
   cursor: not-allowed;
   filter: grayscale(30%) brightness(101%);
   pointer-events: none;
@@ -113,7 +107,7 @@ ul {
 .unit.completed::after {
   content: "✔️";
   color: #24d59a;
-  font-size: 1.08em;
+  font-size: 1.09em;
   margin-left: 10px;
 }
 
@@ -123,30 +117,28 @@ ul {
   font-size: 0.97rem;
   color: #4992bf;
   font-weight: 500;
+  margin-bottom: 8px;
 }
-
 .question {
   font-size: 1.18rem;
-  margin: 18px 0 26px 0;
+  margin: 20px 0 28px 0;
   color: #15517d;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
-
 .options {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 18px;
   margin-bottom: 32px;
 }
-
 .option-btn {
   background: #2484c6;
   color: #fff;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
   padding: 15px 6px;
-  font-size: 1.17rem;
+  font-size: 1.15rem;
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -157,7 +149,7 @@ ul {
 }
 .option-btn:hover, .option-btn:active {
   background: #1768a6;
-  box-shadow: 0 3px 13px rgba(58,152,252,0.11);
+  box-shadow: 0 3px 13px rgba(58,152,252,0.12);
 }
 
 /* Score Card & Result */
@@ -174,24 +166,22 @@ ul {
   font-size: 1.33rem;
   font-weight: bold;
   color: #19a659;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   letter-spacing: 0.05em;
 }
 .score-comment {
-  font-size: 1rem;
-  color: #1ca389;
-  opacity: 0.9;
+  font-size: 1.03rem;
+  color: #26a78e;
+  opacity: 0.92;
   margin-bottom: 0;
 }
-
-/* Review of answers */
 .result-list {
   margin: 28px 0 20px 0;
 }
 .result-question {
   background: #fafeff;
-  margin-bottom: 15px;
-  padding: 15px 13px 12px 13px;
+  margin-bottom: 16px;
+  padding: 16px 13px 13px 13px;
   border-radius: 10px;
   border: 1.5px solid #e0f3fa;
   font-size: 1.08rem;
@@ -221,10 +211,9 @@ span.wrong {
   border-radius: 6px;
   margin: 0 3px 0 0;
 }
-
 .result-correct-icon, .result-wrong-icon {
   font-weight: 900;
-  font-size: 1.11em;
+  font-size: 1.13em;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -235,14 +224,13 @@ span.wrong {
 .result-wrong-icon {
   color: #de2458;
 }
-
 .retry-btn {
   background: #7d3be4;
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 16px;
-  font-size: 1.11rem;
+  font-size: 1.14rem;
   width: 100%;
   margin: 20px 0 12px 0;
   cursor: pointer;
@@ -260,7 +248,7 @@ span.wrong {
   border: none;
   border-radius: 7px;
   padding: 13px;
-  font-size: 1.04rem;
+  font-size: 1.06rem;
   width: 100%;
   margin: 0 0 17px 0;
   cursor: pointer;
@@ -272,8 +260,20 @@ span.wrong {
   background: #e7effa;
 }
 
+footer {
+  margin-top: 40px;
+  padding: 13px 0 15px 0;
+  background: #f1f6fb;
+  color: #72869f;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1.5px solid #e3e6f3;
+  letter-spacing: 0.01em;
+}
+
 @media (max-width: 700px) {
   .app-title { font-size: 1.13rem; }
+  .subtitle { font-size: 0.99rem; }
   .instructions { font-size: .98rem; }
   #app { max-width: 100vw; min-height: unset; padding: 12px 1vw 13px 1vw; border-radius: 0; margin: 0; }
 }
