@@ -3,41 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <title>Nursing Education MCQ App</title>
-  <meta name="description" content="Unit-wise MCQ practice for Nursing Education (8 units) with progressive unlocking and instant feedback.">
+  <meta name="description" content="Practice unit-wise Nursing Education MCQs (8 units) with instant feedback and progressive unlocking.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Favicon for identity -->
+  <!-- Beautiful icon for browser tabs -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍⚕️</text></svg>">
 
-  <!-- Recommended Google Fonts for modern look -->
+  <!-- Modern, clean Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Basic layout polish and gradient bg for modern feel */
+    html, body { margin: 0; padding: 0; }
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(112deg, #e6f4fc 0%, #fafdff 100%);
-      margin: 0;
+      background: linear-gradient(120deg, #e6f4fc 0%, #fafdff 100%);
+      min-height: 100vh;
+      color: #1c355c;
     }
     header {
       text-align: center;
-      padding: 30px 0 12px 0;
+      padding: 32px 0 10px 0;
       background: linear-gradient(90deg, #eaf7fc 60%, #f5fafb 100%);
-      box-shadow: 0 2px 14px rgba(44,144,227,0.10);
+      box-shadow: 0 2px 14px rgba(44,144,227,0.08);
     }
     .app-title {
       font-size: 2rem;
       font-weight: 800;
-      color: #2a8ec7;
+      color: #2988de;
+      letter-spacing: 1.5px;
       margin: 0 0 4px 0;
-      letter-spacing: 2px;
-      text-shadow: 0 2px 7px #eaf6fd;
+      text-shadow: 0 2px 8px #eaf6fd;
     }
     .subtitle {
       color: #3582b0;
-      font-size: 1.12rem;
+      font-size: 1.13rem;
       font-weight: 700;
       letter-spacing: .04em;
+      margin-bottom: 0;
+    }
+    .instructions {
+      margin: 24px auto 16px auto;
+      background: #fcfeff;
+      border: 1.5px solid #e3eef7;
+      padding: 16px 14px;
+      border-radius: 10px;
+      font-size: 1.07rem;
+      color: #266ca3;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 1px 8px #e7f3fc;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 13px 0 15px 0;
+      background: #f1f6fb;
+      color: #72869f;
+      text-align: center;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      border-top: 1.5px solid #e3e6f3;
+    }
+    @media (max-width:600px) {
+      .app-title { font-size: 1.28rem; }
+      .subtitle { font-size: 0.99rem; }
+      .instructions { font-size: .99rem; max-width:98vw;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="app-title">Nursing Education MCQ App 🩺</div>
+    <div class="subtitle">Unit-wise MCQ Practice &mdash; 8 Units (Progressive Unlocking)</div>
+  </header>
+
+  <div class="instructions">
+    <strong>How it works:</strong><br>
+    • All 8 units are always visible.<br>
+    • Start with Unit 1. To unlock the next unit, score 100% in the current one.<br>
+    • Locked units are visible but faded.<br>
+    • Instantly see your score and feedback after each quiz.
+  </div>
+
+  <!-- The app will render here via JavaScript -->
+  <div id="app"></div>
+
+  <footer>
+    &copy; <span id="year"></span> Nursing Education MCQ App &bull; Last updated July 2025
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById('year').textContent = (new Date()).getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
