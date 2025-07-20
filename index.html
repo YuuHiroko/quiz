@@ -3,98 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <title>Nursing Education MCQ App</title>
-  <meta name="description" content="Practice unit-wise Nursing Education MCQs (8 units) with instant feedback and progressive unlocking.">
+  <meta name="description" content="Practice and master nursing education with unit-wise MCQs, instant feedback, and progressive unlock for deep learning.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Beautiful icon for browser tabs -->
+  <!-- Emoji Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍⚕️</text></svg>">
 
-  <!-- Modern, clean Google Font -->
+  <!-- Google Fonts: Inter & Nunito for professional yet friendly look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <style>
-    html, body { margin: 0; padding: 0; }
     body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(120deg, #e6f4fc 0%, #fafdff 100%);
+      background: linear-gradient(120deg, #d2f6ff 15%, #fafdfe 80%);
       min-height: 100vh;
-      color: #1c355c;
+      margin: 0;
+      font-family: 'Inter', 'Nunito', Arial, sans-serif;
+      color: #174067;
     }
     header {
+      background: linear-gradient(93deg,#d7f4fb 60%,#f8f7fa 100%);
+      box-shadow: 0 2px 12px rgba(36,180,220,0.07);
       text-align: center;
-      padding: 32px 0 10px 0;
-      background: linear-gradient(90deg, #eaf7fc 60%, #f5fafb 100%);
-      box-shadow: 0 2px 14px rgba(44,144,227,0.08);
+      padding: 38px 0 0 0;
     }
-    .app-title {
-      font-size: 2rem;
+    .logo-row {
+      font-size: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65em;
+      font-family: 'Nunito', Arial, sans-serif;
       font-weight: 800;
-      color: #2988de;
-      letter-spacing: 1.5px;
-      margin: 0 0 4px 0;
-      text-shadow: 0 2px 8px #eaf6fd;
+      color: #22a1cf;
+      margin-bottom: 8px;
+      text-shadow: 0 1px 12px #bdf2fe;
+    }
+    .logo-row .app-icon {
+      font-size: 2.5rem;
     }
     .subtitle {
-      color: #3582b0;
       font-size: 1.13rem;
       font-weight: 700;
-      letter-spacing: .04em;
-      margin-bottom: 0;
+      color: #3e7398;
+      margin: 0 0 9px 0;
     }
-    .instructions {
-      margin: 24px auto 16px auto;
-      background: #fcfeff;
-      border: 1.5px solid #e3eef7;
-      padding: 16px 14px;
-      border-radius: 10px;
-      font-size: 1.07rem;
-      color: #266ca3;
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 1px 8px #e7f3fc;
+    .how-works {
+      max-width: 560px;
+      margin: 25px auto 22px auto;
+      padding: 22px 19px 18px 19px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 30px rgba(44,170,188,0.11);
+      border: 2px solid #cbf1fc;
+      font-size: 1.09rem;
+      color: #24788f;
+      text-align: left;
+      line-height: 1.62;
+      position: relative;
+      font-family: 'Nunito', 'Inter', Arial, sans-serif;
+    }
+    .how-works strong {
+      font-size: 1.18rem;
+      color: #198e6a;
+      letter-spacing: .01em;
+    }
+    .how-works .hw-emoji {
+      float: right; font-size: 1.6rem; margin-left: 5px; margin-bottom: 0;
+    }
+    .how-works ol {
+      margin-left: 1.2em;
+      padding-left: 0.2em;
+    }
+    .how-works li {
+      margin: 0 0 7px 0;
+    }
+    .how-works-footer {
+      display: block;
+      margin-top: 11px;
+      color: #1772d1;
+      font-weight: 700;
+      font-size:1.04em;
+    }
+    #app {
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 7px 36px rgba(44,144,187,0.16);
+      padding: 38px 16px 34px 16px;
+      max-width: 580px;
+      min-height: 495px;
     }
     footer {
-      margin-top: 40px;
-      padding: 13px 0 15px 0;
-      background: #f1f6fb;
-      color: #72869f;
-      text-align: center;
+      margin-top: 48px;
+      padding: 18px 0 20px 0;
+      background: #eaf7fc;
+      color: #4f719e;
       font-size: 1rem;
+      text-align: center;
+      border-top: 1.5px solid #dce8f2;
       letter-spacing: 0.01em;
-      border-top: 1.5px solid #e3e6f3;
     }
-    @media (max-width:600px) {
-      .app-title { font-size: 1.28rem; }
-      .subtitle { font-size: 0.99rem; }
-      .instructions { font-size: .99rem; max-width:98vw;}
+    @media (max-width: 680px) {
+      header { padding: 16px 0 0 0;}
+      .how-works { padding: 14px 4vw 13px 4vw; font-size: 1rem; }
+      #app { max-width: 99vw; padding: 9px 1vw 16px 1vw; border-radius: 0; }
+      .logo-row { font-size: 1.34rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="app-title">Nursing Education MCQ App 🩺</div>
-    <div class="subtitle">Unit-wise MCQ Practice &mdash; 8 Units (Progressive Unlocking)</div>
+    <div class="logo-row">
+      <span class="app-icon">🩺</span>
+      Nursing Education MCQ App
+    </div>
+    <div class="subtitle">Practice, master, and unlock all 8 units!</div>
   </header>
 
-  <div class="instructions">
-    <strong>How it works:</strong><br>
-    • All 8 units are always visible — each shows its MCQ count.<br>
-    • Start at Unit 1. To unlock the next unit, score 100% in the current one.<br>
-    • Locked units are visible but faded; all scores and reviews are instant.
-  </div>
+  <section class="how-works">
+    <strong><span class="hw-emoji">✨</span> How it works:</strong>
+    <ol>
+      <li>All 8 units are visible, with MCQ counts next to the names.</li>
+      <li>Tap any <b>unlocked</b> unit card to start its MCQ quiz.</li>
+      <li>After each quiz, review your answers, see instant feedback, and check your score.</li>
+      <li>Score <span style="color:#17a35d;font-weight:600;">100%</span> in a unit to unlock the next one!</li>
+      <li>You can retry any completed unit to improve and review.</li>
+    </ol>
+    <span class="how-works-footer">Good luck, and have fun learning! 🏅</span>
+  </section>
 
   <!-- The app will render here via JavaScript -->
   <div id="app"></div>
 
   <footer>
-    &copy; <span id="year"></span> Nursing Education MCQ App &bull; For progressive learning
+    &copy; <span id="year"></span> Nursing Education MCQ App &bull; Last updated July 2025
   </footer>
-
   <script>
-    // Auto year
     document.getElementById('year').textContent = (new Date()).getFullYear();
   </script>
   <script src="script.js"></script>
