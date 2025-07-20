@@ -464,7 +464,7 @@ const unitsData = {
       ]
     },
     // ---------- UNIT 3–8: FILL THESE BLOCKS IN THIS FORMAT ----------
-    { unitName: "Unit 3: Implementation", questions: [ {
+   {
   unitName: "Unit 3: Implementation",
   questions: [
     {
@@ -718,10 +718,8 @@ const unitsData = {
       correctAnswer: "Body language and gestures"
     }
   ]
-}
- ]
 },
-    { unitName: "Unit 4: Teaching in the Clinical Setting", questions: [ {
+    { 
   unitName: "Unit 4: Teaching in the Clinical Setting",
   questions: [
     {
@@ -825,10 +823,8 @@ const unitsData = {
       correctAnswer: "Incorporates active learning into interactive tasks"
     }
   ]
-}
- ] 
 },
-    { unitName: "Unit 5: Educational/Teaching Media", questions: [ {
+    {
   unitName: "Unit 5: Educational/Teaching Media",
   questions: [
     {
@@ -932,10 +928,8 @@ const unitsData = {
       correctAnswer: "All of these"
     }
   ]
-}
- ] 
 },
-    { unitName: "Unit 6: Assessment and Evaluation Methodologies", questions: [ {
+    {
   unitName: "Unit 6: Assessment and Evaluation Methodologies",
   questions: [
     {
@@ -1039,10 +1033,8 @@ const unitsData = {
       correctAnswer: "Rating scale"
     }
   ]
-}
- ] 
 },
-    { unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline", questions: [ {
+    {
   unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline",
   questions: [
     {
@@ -1146,10 +1138,8 @@ const unitsData = {
       correctAnswer: "Learning on one’s own"
     }
   ]
-}
- ] 
 },
-    { unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education", questions: [ {
+    {
   unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education",
   questions: [
     {
@@ -1192,8 +1182,6 @@ const unitsData = {
       ],
       correctAnswer: "Visual representation of information"
     }
-  ]
-}
   ]
 };
 
