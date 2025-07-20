@@ -1,6 +1,5 @@
 const unitsData = {
   "Nursing Education": [
-    // ---------- UNIT 1 ----------
     {
       unitName: "Unit 1: Introduction to Theoretical Foundations",
       questions: [
@@ -26,7 +25,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 2 ----------
     {
       unitName: "Unit 2: Assessment and Planning",
       questions: [
@@ -52,7 +50,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 3 ----------
     {
       unitName: "Unit 3: Implementation",
       questions: [
@@ -78,7 +75,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 4 ----------
     {
       unitName: "Unit 4: Teaching in the Clinical Setting",
       questions: [
@@ -100,11 +96,10 @@ const unitsData = {
             "Combination of patient experience and nurse’s observation",
             "All of the above"
           ],
-          correctAnswer: "Observed by the nurse"
+          correctAnswer: "Experience by the patient and reported to nurse" // Note: As per attached, this matches the answer style.
         }
       ]
     },
-    // ---------- UNIT 5 ----------
     {
       unitName: "Unit 5: Educational/Teaching Media",
       questions: [
@@ -130,7 +125,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 6 ----------
     {
       unitName: "Unit 6: Assessment and Evaluation Methodologies",
       questions: [
@@ -156,7 +150,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 7 ----------
     {
       unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline",
       questions: [
@@ -182,7 +175,6 @@ const unitsData = {
         }
       ]
     },
-    // ---------- UNIT 8 ----------
     {
       unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education",
       questions: [
@@ -217,8 +209,8 @@ const COMPLETE_KEY = "ne_mcq_units_completed";
 function initUnitProgress() {
   let unlocked = JSON.parse(localStorage.getItem(UNLOCK_KEY));
   let completed = JSON.parse(localStorage.getItem(COMPLETE_KEY));
-  if (!Array.isArray(unlocked) || unlocked.length !== 8) unlocked = [true, false, false, false, false, false, false, false];
-  if (!Array.isArray(completed) || completed.length !== 8) completed = [false, false, false, false, false, false, false, false];
+  if (!Array.isArray(unlocked) || unlocked.length !== unitsData["Nursing Education"].length) unlocked = Array(unitsData["Nursing Education"].length).fill(false).map((_,i)=>i===0);
+  if (!Array.isArray(completed) || completed.length !== unitsData["Nursing Education"].length) completed = Array(unitsData["Nursing Education"].length).fill(false);
   return { unlocked, completed };
 }
 function saveUnitProgress(unlocked, completed) {
@@ -234,7 +226,7 @@ let answers = [];
 
 function showUnits() {
   const app = document.getElementById('app');
-  app.innerHTML = '<h2>Units</h2><ul class="unit-list"></ul>';
+  app.innerHTML = '<h2 style="font-family:Nunito,Arial,sans-serif;color:#1997c5;text-align:center;margin-bottom:29px;">Select a Unit</h2><ul class="unit-list"></ul>';
   const list = app.querySelector('.unit-list');
   unitsData["Nursing Education"].forEach((unit, idx) => {
     const li = document.createElement('li');
@@ -247,20 +239,20 @@ function showUnits() {
     `;
     if (completed[idx]) li.title = "Completed! All answers correct.";
     else if (!unlocked[idx]) li.title = "Unlock this unit by scoring 100% on the previous unit.";
-    else li.title = "Start quiz for this unit";
+    else li.title = "Tap to start this unit's quiz";
     li.tabIndex = unlocked[idx] ? 0 : -1;
     if (unlocked[idx]) {
       li.onclick = () => startQuiz(idx);
+      li.onkeyup = e => (e.key === "Enter" || e.key === " ") && startQuiz(idx);
     }
     list.appendChild(li);
   });
-  // Unlock banner
   if (unlocked.some((u, idx) => u && !completed[idx] && idx > 0 && !unlocked[idx-1])) {
     app.innerHTML += `
       <div style="margin-top:20px; background:linear-gradient(90deg,#cdf9e7,#f1fff9 80%);
-                  color:#167255;padding:15px 12px;border-radius:8px;font-weight:600;
-                  border:1.5px solid #b5efdf;font-size:1.05rem;text-align:center">
-        🎉 Congrats! You’ve unlocked a new unit. Keep going for perfection!
+                  color:#167255;padding:15px 12px;border-radius:8px;font-weight:700;
+                  border:1.5px solid #b5efdf;font-size:1.12rem;text-align:center;box-shadow:0 3px 18px #caffee;">
+        🎉 Congrats! You’ve unlocked a new unit! Keep going for perfection!
       </div>
     `;
   }
@@ -278,8 +270,10 @@ function showQuestion() {
   const question = unit.questions[currentQuestionIdx];
   const app = document.getElementById('app');
   app.innerHTML = `
-    <h2>${unit.unitName}</h2>
-    <div class="progress">Q${currentQuestionIdx + 1} / ${unit.questions.length}</div>
+    <h2 style="text-align:center; font-family:'Nunito',Arial,sans-serif;color:#1c889b;padding-bottom:15px;">
+      ${unit.unitName}
+    </h2>
+    <div class="progress">Q${currentQuestionIdx + 1} of ${unit.questions.length}</div>
     <div class="question">${question.questionText}</div>
     <div class="options" id="options"></div>
     <button class="back-btn" onclick="showUnits()">⬅ Back to Units</button>
@@ -288,11 +282,12 @@ function showQuestion() {
     const btn = document.createElement('button');
     btn.textContent = opt;
     btn.className = "option-btn";
-    btn.onclick = () => submitAnswer(opt);
+    btn.onclick = () => submitAnswer(opt, btn);
     document.getElementById('options').appendChild(btn);
   });
 }
-function submitAnswer(selected) {
+
+function submitAnswer(selected, btn) {
   const unit = unitsData["Nursing Education"][currentUnitIdx];
   const question = unit.questions[currentQuestionIdx];
   answers.push({
@@ -301,48 +296,56 @@ function submitAnswer(selected) {
     selected,
     correct: question.correctAnswer
   });
+  document.querySelectorAll('.option-btn').forEach(b => {
+    b.disabled = true;
+    if (b.textContent === question.correctAnswer) b.classList.add('highlight-correct');
+    if (b.textContent === selected && selected !== question.correctAnswer) b.classList.add('highlight-wrong');
+  });
+
   if (selected === question.correctAnswer) score++;
-  currentQuestionIdx++;
-  if (currentQuestionIdx < unit.questions.length) {
-    showQuestion();
-  } else {
-    showResult();
-  }
+  setTimeout(() => {
+    currentQuestionIdx++;
+    if (currentQuestionIdx < unit.questions.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 650);
 }
+
 function showResult() {
   const unit = unitsData["Nursing Education"][currentUnitIdx];
   const app = document.getElementById('app');
   const isPerfect = score === unit.questions.length;
   completed[currentUnitIdx] = isPerfect;
-  if (isPerfect && currentUnitIdx < 7 && !unlocked[currentUnitIdx + 1]) {
+  if (isPerfect && currentUnitIdx < unitsData["Nursing Education"].length - 1 && !unlocked[currentUnitIdx + 1]) {
     unlocked[currentUnitIdx + 1] = true;
   }
   saveUnitProgress(unlocked, completed);
 
-  let comment = isPerfect ? "Perfect! This unit is complete and the next is unlocked." :
-    score / unit.questions.length > 0.8 ? "Excellent! Try again for a perfect score and unlock the next unit." :
-    score / unit.questions.length > 0.6 ? "Good effort. Try to master all questions for progress." :
+  let comment = isPerfect ? "🌟 Perfect! This unit is complete, and the next is now unlocked." :
+    score / unit.questions.length > 0.8 ? "Great! Try again for a perfect score and unlock the next unit." :
+    score / unit.questions.length > 0.6 ? "Good job. Try again to master all questions." :
     "Keep practicing! Review the correct answers below.";
 
   app.innerHTML = `
-    <div class="score-card">
-      <div class="score">Your Score: ${score} / ${unit.questions.length}</div>
+    <div class="score-card" style="animation:popin 0.5s;">
+      <div class="score" style="letter-spacing:.03em;">Your Score: ${score} / ${unit.questions.length}</div>
       <div class="score-comment">${comment}</div>
-      ${isPerfect ? `<div style="color:#19a659;margin-top:6px;font-weight:700;font-size:1.14em;">🎉 Unit Unlocked!</div>` : ""}
+      ${isPerfect ? `<div style="color:#19a659;margin-top:9px;font-weight:800;font-size:1.21em;">🎉 Unit Unlocked!</div>` : ""}
     </div>
     <div class="result-list">
       ${answers.map((a, i) => `
-        <div class="result-question">
-          <span class="q-title">Q${i + 1}. ${a.question}</span>
+        <div class="result-question" tabindex="0">
+          <span class="q-title"><b>Q${i + 1}.</b> ${a.question}</span>
           <div>
-            Your answer: 
-              <span class="${a.selected === a.correct ? 'correct' : 'wrong'}">
-                ${a.selected}
-                ${a.selected === a.correct 
-                  ? '<span class="result-correct-icon">✔️</span>'
-                  : '<span class="result-wrong-icon">❌</span>'
-                }
-              </span>
+            Your answer:
+            <span class="${a.selected === a.correct ? 'correct' : 'wrong'}">
+              ${a.selected}
+              ${a.selected === a.correct 
+                ? '<span class="result-correct-icon">✔️</span>'
+                : '<span class="result-wrong-icon">❌</span>'}
+            </span>
           </div>
           <div>
             Correct answer: <span class="correct">${a.correct}</span>
@@ -350,12 +353,11 @@ function showResult() {
         </div>
       `).join('')}
     </div>
-    <button class="retry-btn" onclick="startQuiz(${currentUnitIdx})">Try This Unit Again</button>
+    <button class="retry-btn" onclick="startQuiz(${currentUnitIdx})">🔄 Try This Unit Again</button>
     <button class="back-btn" onclick="showUnits()">⬅ Back to Units</button>
   `;
 }
 
-// Init
 window.showUnits = showUnits;
 window.startQuiz = startQuiz;
 document.addEventListener("DOMContentLoaded", showUnits);
