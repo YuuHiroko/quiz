@@ -111,6 +111,19 @@ ul {
   margin-left: 10px;
 }
 
+.mcq-count {
+  color: #768ab4;
+  background: #f3f7fa;
+  font-size: 0.98em;
+  font-weight: 600;
+  margin-left: 13px;
+  padding: 3px 9px;
+  border-radius: 12px;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  box-shadow: 0 1px 4px #eaeef1;
+}
+
 /* Quiz/question styles */
 .progress {
   text-align: right;
