@@ -464,12 +464,736 @@ const unitsData = {
       ]
     },
     // ---------- UNIT 3–8: FILL THESE BLOCKS IN THIS FORMAT ----------
-    { unitName: "Unit 3: Implementation", questions: [ /* ... */ ] },
-    { unitName: "Unit 4: Teaching in the Clinical Setting", questions: [ /* ... */ ] },
-    { unitName: "Unit 5: Educational/Teaching Media", questions: [ /* ... */ ] },
-    { unitName: "Unit 6: Assessment and Evaluation Methodologies", questions: [ /* ... */ ] },
-    { unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline", questions: [ /* ... */ ] },
-    { unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education", questions: [ /* ... */ ] }
+    { unitName: "Unit 3: Implementation", questions: [ {
+  unitName: "Unit 3: Implementation",
+  questions: [
+    {
+      questionText: "_________________ refers to communication without the usage of words.",
+      options: [
+        "Object to object communication",
+        "Communication by writing",
+        "Nonverbal Communication",
+        "Oral communication"
+      ],
+      correctAnswer: "Nonverbal Communication"
+    },
+    {
+      questionText: "_________________ is the name of the person who sends the message.",
+      options: [
+        "Channel",
+        "Sender",
+        "Receiver",
+        "Response"
+      ],
+      correctAnswer: "Sender"
+    },
+    {
+      questionText: "_________________ strives to get people to work together for the organization’s common good.",
+      options: [
+        "Communication",
+        "Conversation",
+        "Combination",
+        "Connection"
+      ],
+      correctAnswer: "Communication"
+    },
+    {
+      questionText: "There is a chance of interference at each level of the communication process, which could hinder the process. This type of interference is referred to as _________________.",
+      options: [
+        "Sender",
+        "Receiver",
+        "Barrier",
+        "None of these"
+      ],
+      correctAnswer: "Barrier"
+    },
+    {
+      questionText: "_________________ refers to all nonverbal means of human communication.",
+      options: [
+        "Prosody",
+        "Vocalic",
+        "Haptics",
+        "Para language"
+      ],
+      correctAnswer: "Para language"
+    },
+    {
+      questionText: "Communication is _________________ transfer of information or message.",
+      options: [
+        "Interpersonal",
+        "Impersonal",
+        "Personal",
+        "Important"
+      ],
+      correctAnswer: "Personal"
+    },
+    {
+      questionText: "The sender and receiver are linked by a _________________.",
+      options: [
+        "Channel",
+        "Noise",
+        "Communication",
+        "Feedback"
+      ],
+      correctAnswer: "Channel"
+    },
+    {
+      questionText: "The _________________ in word usage could be a major impediment to good communication.",
+      options: [
+        "Disturbance",
+        "Discrimination",
+        "Disorder",
+        "Distortion"
+      ],
+      correctAnswer: "Distortion"
+    },
+    {
+      questionText: "When we speak, most of us use _________________ and _________________ in addition to words.",
+      options: [
+        "Body language and posture",
+        "Gesture and body language",
+        "Words and gesture",
+        "Posture and eye gazing"
+      ],
+      correctAnswer: "Body language and posture"
+    },
+    {
+      questionText: "Pitch, loudness, duration, intonation, and pace are all examples of _________________",
+      options: [
+        "Touch",
+        "Gesture",
+        "Haptics",
+        "Prosody"
+      ],
+      correctAnswer: "Gesture"
+    },
+    {
+      questionText: "The major goal is to find specific information that will be useful in _________________",
+      options: [
+        "Comprehension",
+        "Empathetic",
+        "Appreciative",
+        "Therapeutic"
+      ],
+      correctAnswer: "Therapeutic"
+    },
+    {
+      questionText: "_________________ is another name for dialogic listening.",
+      options: [
+        "Therapeutic",
+        "Appreciative",
+        "Relational",
+        "Evaluative"
+      ],
+      correctAnswer: "Appreciative"
+    },
+    {
+      questionText: "_________________ refers to skimming through a textbook to acquire a general sense of the topic.",
+      options: [
+        "Extensive reading",
+        "Skimming",
+        "Scanning",
+        "Intensive"
+      ],
+      correctAnswer: "Skimming"
+    },
+    {
+      questionText: "_________________ reading is great since it aids comprehension.",
+      options: [
+        "Loud",
+        "Intensive",
+        "Silent",
+        "Extensive"
+      ],
+      correctAnswer: "Extensive"
+    },
+    {
+      questionText: "The amount of words on a presentation should be kept to a maximum of _________________ per slide.",
+      options: [
+        "Seven",
+        "Eight",
+        "Nine",
+        "Ten"
+      ],
+      correctAnswer: "Ten"
+    },
+    {
+      questionText: "The _________________ are created by writing the first letters of words in a name or phrase.",
+      options: [
+        "Personal abbreviations",
+        "Field abbreviations",
+        "Acronyms",
+        "None of these"
+      ],
+      correctAnswer: "None of these"
+    },
+    {
+      questionText: "TQM stands for _________________ in a complete form.",
+      options: [
+        "Total quality management",
+        "Total quality manager",
+        "Team quality management",
+        "None of these"
+      ],
+      correctAnswer: "Total quality management"
+    },
+    {
+      questionText: "Internal communication between members of an organization is referred to as _________________.",
+      options: [
+        "Formal",
+        "Informal",
+        "External",
+        "Internal"
+      ],
+      correctAnswer: "Internal"
+    },
+    {
+      questionText: "The _________________ of the problem is marked by informal meetings.",
+      options: [
+        "Immediacy",
+        "Important",
+        "Immediately",
+        "Improvement"
+      ],
+      correctAnswer: "Immediacy"
+    },
+    {
+      questionText: "_________________ is intended for a certain set of people, while _________________ is intended for the broader public.",
+      options: [
+        "Memo, circular",
+        "Notice, circular",
+        "Notice, memo",
+        "Circular, notice"
+      ],
+      correctAnswer: "Circular, notice"
+    },
+    {
+      questionText: "The issue with proofreading is that you’ll need to be proficient in both _________________ and _________________.",
+      options: [
+        "Pronunciation, spelling",
+        "Spelling and punctuation",
+        "Punctuation and pronunciation",
+        "Paraphrasing and spelling"
+      ],
+      correctAnswer: "Spelling and punctuation"
+    },
+    {
+      questionText: "Oral communication ensures that _________________ and _________________ are met.",
+      options: [
+        "Adequate attention, immediate response",
+        "Speedy interaction, immediate response",
+        "Fluency, speed",
+        "Attention, speed"
+      ],
+      correctAnswer: "Adequate attention, immediate response"
+    },
+    {
+      questionText: "In communication, unclarified assumptions can lead to _________________ and _________________ .",
+      options: [
+        "Lack of planning, physical barriers",
+        "Information overload, selective perception",
+        "Premature evaluation, poor listening",
+        "Confusion, misunderstanding"
+      ],
+      correctAnswer: "Confusion, misunderstanding"
+    },
+    {
+      questionText: "Communication’s fundamental purpose is to _________________.",
+      options: [
+        "To create noise",
+        "To create barriers",
+        "To affect a change",
+        "None of these"
+      ],
+      correctAnswer: "To affect a change"
+    },
+    {
+      questionText: "Verbal communication is defined as communication that takes place via the use of __________ and _________________ .",
+      options: [
+        "Gestures and spoken words",
+        "Spoken words and written material",
+        "Body language and gestures",
+        "Written material and gestures"
+      ],
+      correctAnswer: "Body language and gestures"
+    }
+  ]
+}
+ ]
+},
+    { unitName: "Unit 4: Teaching in the Clinical Setting", questions: [ {
+  unitName: "Unit 4: Teaching in the Clinical Setting",
+  questions: [
+    {
+      questionText: "The subjective data denotes:",
+      options: [
+        "Experience by the patient and reported to nurse",
+        "Observed by the nurse",
+        "Combination of patient experience and nurse’s observation",
+        "None of the above"
+      ],
+      correctAnswer: "Experience by the patient and reported to nurse"
+    },
+    {
+      questionText: "The objective data denotes:",
+      options: [
+        "Experience by the patient and reported to nurse",
+        "Observed by the nurse",
+        "Combination of patient experience and nurse’s observation",
+        "All of the above"
+      ],
+      correctAnswer: "Observed by the nurse"
+    },
+    {
+      questionText: "Characteristics of effective clinical teacher are except:",
+      options: [
+        "Intrinsic motivation and clinical competence",
+        "Professional ethics and communication skills",
+        "Random visit to the clinical setting and higher knowledge",
+        "Professional acceptability and appropriate appearance"
+      ],
+      correctAnswer: "Random visit to the clinical setting and higher knowledge"
+    },
+    {
+      questionText: "Factors influencing clinical learning experience are:",
+      options: [
+        "Good mentoring",
+        "Relationship with clinical staff",
+        "Opportunities for practice",
+        "All of the above"
+      ],
+      correctAnswer: "All of the above"
+    },
+    {
+      questionText: "The role of clinical teacher is except:",
+      options: [
+        "Creates environment for learning",
+        "Observe and assess the outcomes",
+        "Outcomes are measured on predetermined objectives",
+        "Force students to practice whatever is available in the clinical setting"
+      ],
+      correctAnswer: "Force students to practice whatever is available in the clinical setting"
+    },
+    {
+      questionText: "The bedside clinic is:",
+      options: [
+        "Process to teaching in clinical setting based on subjective, objective data, diagnostic and therapeutic options",
+        "Process of practice of nursing as instructed by the clinical teacher",
+        "Process of nursing practice based on physician’s prescription",
+        "All of the above"
+      ],
+      correctAnswer: "Process to teaching in clinical setting based on subjective, objective data, diagnostic and therapeutic options"
+    },
+    {
+      questionText: "Strengths of clinical teaching are:",
+      options: [
+        "Real world issues that arise in practice",
+        "Enable students in decision making",
+        "Educationally sound",
+        "All of the above"
+      ],
+      correctAnswer: "All of the above"
+    },
+    {
+      questionText: "The importance of planning for clinical learning experience is:",
+      options: [
+        "To structure context by teacher and student",
+        "Provide frame work for reflection and evaluation",
+        "Enhance spontaneity among students",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "Both (a) and (b)"
+    },
+    {
+      questionText: "Experiential learning is:",
+      options: [
+        "Based on experience",
+        "Conceptualization through reflection",
+        "Arranged instructional session",
+        "All of the above"
+      ],
+      correctAnswer: "All of the above"
+    },
+    {
+      questionText: "Opportunistic active learning:",
+      options: [
+        "Learning by doing",
+        "Incorporates active learning into interactive tasks",
+        "Trial and error method of learning",
+        "None of the above"
+      ],
+      correctAnswer: "Incorporates active learning into interactive tasks"
+    }
+  ]
+}
+ ] 
+},
+    { unitName: "Unit 5: Educational/Teaching Media", questions: [ {
+  unitName: "Unit 5: Educational/Teaching Media",
+  questions: [
+    {
+      questionText: "Tele nursing refers to:",
+      options: [
+        "Utilization of information technology",
+        "Utilization of information technology in provision of nursing service in the hospital",
+        "Utilization of information technology in provision of nursing service from a distance",
+        "It is synonym of tele medicine"
+      ],
+      correctAnswer: "Utilization of information technology in provision of nursing service from a distance"
+    },
+    {
+      questionText: "E-learning platform models except:",
+      options: [
+        "MOOCs and blackboard learn",
+        "Future learn and linkedin",
+        "Skill share and coursera",
+        "Chalk and Blackboard"
+      ],
+      correctAnswer: "Chalk and Blackboard"
+    },
+    {
+      questionText: "The types of models are:",
+      options: [
+        "Solid models and cutaway models",
+        "Working models and sand models",
+        "X-ray model and MRI model",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "X-ray model and MRI model"
+    },
+    {
+      questionText: "Disadvantage of blackboard and chalk is except:",
+      options: [
+        "Cannot be saved or preserved",
+        "Cannot be used for large audience",
+        "Require imagination",
+        "Economical and reusable"
+      ],
+      correctAnswer: "Economical and reusable"
+    },
+    {
+      questionText: "Principles of AV aids are:",
+      options: [
+        "Preparation and handling",
+        "Selection and presentation",
+        "Condemnation",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "Condemnation"
+    },
+    {
+      questionText: "Factors influencing effectiveness of AV aids are:",
+      options: [
+        "Preparation and preservation",
+        "Selection",
+        "Presentation and evaluation",
+        "All of these"
+      ],
+      correctAnswer: "All of these"
+    },
+    {
+      questionText: "AV aids can be classified as:",
+      options: [
+        "Projected and nonprojected",
+        "Hearing aids and visual aids",
+        "Simple and sophisticated aids",
+        "All of these"
+      ],
+      correctAnswer: "All of these"
+    },
+    {
+      questionText: "“The AV aids are sensory objects that help in stimulations and reinforcing learning” was defined by:",
+      options: [
+        "Burton",
+        "Kinder S James",
+        "Mcknown and Roberts",
+        "None of these"
+      ],
+      correctAnswer: "Burton"
+    },
+    {
+      questionText: "The advantage of charts is:",
+      options: [
+        "Simple to preserve",
+        "Easy transportability",
+        "Easily available in the market",
+        "None of these"
+      ],
+      correctAnswer: "Easy transportability"
+    },
+    {
+      questionText: "Three dimensional aids are:",
+      options: [
+        "Nearest to the living experience",
+        "Mock-ups",
+        "Models",
+        "All of these"
+      ],
+      correctAnswer: "All of these"
+    }
+  ]
+}
+ ] 
+},
+    { unitName: "Unit 6: Assessment and Evaluation Methodologies", questions: [ {
+  unitName: "Unit 6: Assessment and Evaluation Methodologies",
+  questions: [
+    {
+      questionText: "Evaluation is a process of:",
+      options: [
+        "Appraisal in every aspect of life",
+        "Teaching in graduate schools",
+        "Method of teaching",
+        "None of the above"
+      ],
+      correctAnswer: "Appraisal in every aspect of life"
+    },
+    {
+      questionText: "To make evaluation easy, the expected learning outcomes need to be:",
+      options: [
+        "Specific and measurable",
+        "Achievable",
+        "Sample",
+        "All of these"
+      ],
+      correctAnswer: "All of these"
+    },
+    {
+      questionText: "The types of evaluation are:",
+      options: [
+        "Formative",
+        "Summative",
+        "Comprehensive",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "Both (a) and (b)"
+    },
+    {
+      questionText: "Formative evaluation is:",
+      options: [
+        "Done during the course of instruction",
+        "Done during the end of course",
+        "Both a and b",
+        "None of these"
+      ],
+      correctAnswer: "Done during the course of instruction"
+    },
+    {
+      questionText: "Advantages of multiple choice questions are:",
+      options: [
+        "Objective in nature",
+        "Subjective in nature",
+        "Respondents concentrate on information",
+        "Both (a) and (c)"
+      ],
+      correctAnswer: "Both (a) and (c)"
+    },
+    {
+      questionText: "Barriers in evaluation are:",
+      options: [
+        "Perfect planning and evaluation",
+        "Lack of expert evaluation",
+        "Ineffective assessment test",
+        "Both (b) and (c)"
+      ],
+      correctAnswer: "Ineffective assessment test"
+    },
+    {
+      questionText: "OSCE stands for:",
+      options: [
+        "Objective structured clinical examination",
+        "Objective structure critical examination",
+        "Objective structured counseling examination",
+        "None of these"
+      ],
+      correctAnswer: "Objective structured clinical examination"
+    },
+    {
+      questionText: "In OSPE the types of stations are:",
+      options: [
+        "Skill station and response station",
+        "Simulator",
+        "Analytical station",
+        "None of these"
+      ],
+      correctAnswer: "Skill station and response station"
+    },
+    {
+      questionText: "Progress note are records kept by:",
+      options: [
+        "Nurses and doctors",
+        "Administrates",
+        "Medical records personnel",
+        "None of these"
+      ],
+      correctAnswer: "Nurses and doctors"
+    },
+    {
+      questionText: "The kind of survey items in which the respondents indicate the extent is known as:",
+      options: [
+        "Semantic differential scale",
+        "Likert scale",
+        "Rating scale",
+        "Attitude scale"
+      ],
+      correctAnswer: "Rating scale"
+    }
+  ]
+}
+ ] 
+},
+    { unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline", questions: [ {
+  unitName: "Unit 7: Guidance/Academic Advising Counseling and Discipline",
+  questions: [
+    {
+      questionText: "Empathy is defined as:",
+      options: [
+        "Feeling of helplessness",
+        "Non-caring attitude",
+        "Synonym of sympathy",
+        "Patting oneself in someone else position"
+      ],
+      correctAnswer: "Patting oneself in someone else position"
+    },
+    {
+      questionText: "In eclectic counseling the client and counselor works in:",
+      options: [
+        "Work in isolation",
+        "Clients depend on counselor",
+        "Coordinative method",
+        "None of these"
+      ],
+      correctAnswer: "Coordinative method"
+    },
+    {
+      questionText: "Areas of counseling includes all excepts:",
+      options: [
+        "Education and vocations",
+        "Personal and social",
+        "Family and marriage",
+        "Job adjustment and mental health problem"
+      ],
+      correctAnswer: "Family and marriage"
+    },
+    {
+      questionText: "The aims of guidance are:",
+      options: [
+        "To bring all round development of a child",
+        "To make him/her to every thing perfectly",
+        "To enable him/her exceptional in academics",
+        "All of these"
+      ],
+      correctAnswer: "To bring all round development of a child"
+    },
+    {
+      questionText: "The social aim of vocational guidance is:",
+      options: [
+        "Solve problems in social relationship",
+        "Develop feeling of social acceptance",
+        "Provide wish status in society",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "Provide wish status in society"
+    },
+    {
+      questionText: "Principles of counseling includes all except:",
+      options: [
+        "Acceptance",
+        "Respect",
+        "Autonomy",
+        "Respect to the counselor"
+      ],
+      correctAnswer: "Autonomy"
+    },
+    {
+      questionText: "The theory of self was developed by:",
+      options: [
+        "Carl Rogers",
+        "Karl Marx",
+        "Carlos Alcaraz",
+        "Carl Sagan"
+      ],
+      correctAnswer: "Carl Rogers"
+    },
+    {
+      questionText: "Occupational information is essential for:",
+      options: [
+        "Career refinement",
+        "Career upgradation",
+        "Career planning",
+        "None of these"
+      ],
+      correctAnswer: "Career upgradation"
+    },
+    {
+      questionText: "Counseling skills includes all excepts:",
+      options: [
+        "Attending",
+        "Listening",
+        "Giving assurance",
+        "Both (a) and (b)"
+      ],
+      correctAnswer: "Listening"
+    },
+    {
+      questionText: "Self directed education refers to:",
+      options: [
+        "Learning on one’s own",
+        "Learning by doing",
+        "Learning by example",
+        "Learning by hit and trial"
+      ],
+      correctAnswer: "Learning on one’s own"
+    }
+  ]
+}
+ ] 
+},
+    { unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education", questions: [ {
+  unitName: "Unit 8: Ethics and Evidence-Based Teaching in Nursing Education",
+  questions: [
+    {
+      questionText: "Strategies used in evidence-based teaching include all except:",
+      options: [
+        "Online and concept mapping",
+        "Internet and game-based learning",
+        "Problem-based learning case study",
+        "Simulation and seminar"
+      ],
+      correctAnswer: "Problem-based learning case study"
+    },
+    {
+      questionText: "Which of the following is an ethical principle that guide nursing practice?",
+      options: [
+        "Autonomy",
+        "Utilitarian",
+        "Virtue",
+        "Care"
+      ],
+      correctAnswer: "Utilitarian"
+    },
+    {
+      questionText: "Steps of EBP are:",
+      options: [
+        "Ask and analyze",
+        "Acquire and apply",
+        "Appraise",
+        "All of these"
+      ],
+      correctAnswer: "Appraise"
+    },
+    {
+      questionText: "Concept mapping are:",
+      options: [
+        "Visual representation of information",
+        "Auditory representation of information",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      correctAnswer: "Visual representation of information"
+    }
+  ]
+}
   ]
 };
 
