@@ -1,29 +1,159 @@
 const unitsData = {
   "Nursing Education": [
     {
-      unitName: "Unit 1: Introduction to Theoretical Foundations",
-      questions: [
-        {
-          questionText: "The all-round development drawing out the best of a child was envisaged by:",
-          options: [
-            "Swami Vivekananda",
-            "Aurobindo Ghosh",
-            "Mahatma Gandhi",
-            "Dr Radhakrishnan"
-          ],
-          correctAnswer: "Mahatma Gandhi"
-        },
-        {
-          questionText: "Reconstruction is termed:",
-          options: [
-            "Critical thinking theory",
-            "Assumption theory",
-            "Inclusion theory",
-            "Exclusion theory"
-          ],
-          correctAnswer: "Critical thinking theory"
-        }
-      ]
+  unitName: "Unit 1: Introduction to Theoretical Foundations",
+  questions: [
+    {
+      questionText: "The all-round development drawing out the best of a child was envisaged by:",
+      options: [
+        "Swami Vivekananda",
+        "Aurobindo Ghosh",
+        "Mahatma Gandhi",
+        "Dr Radhakrishnan"
+      ],
+      correctAnswer: "Mahatma Gandhi"
+    },
+    {
+      questionText: "Reconstruction is termed:",
+      options: [
+        "Critical thinking theory",
+        "Assumption theory",
+        "Inclusion theory",
+        "Exclusion theory"
+      ],
+      correctAnswer: "Critical thinking theory"
+    },
+    {
+      questionText: "Education is termed:",
+      options: [
+        "Fitness of good.",
+        "Living a better life by caring good",
+        "Lifelong process",
+        "Process to achieve something"
+      ],
+      correctAnswer: "Lifelong process"
+    },
+    {
+      questionText: "Arms of education are:",
+      options: [
+        "Social, volcano and cultural",
+        "Normal, spiritual and intellectual",
+        "To get an employment",
+        "Both (a) and (d)"
+      ],
+      correctAnswer: "Both (a) and (d)"
+    },
+    {
+      questionText: "Principles of education is except:",
+      options: [
+        "Self-determination",
+        "Develop independent learning skills",
+        "Develop leadership skills",
+        "To guide people"
+      ],
+      correctAnswer: "To guide people"
+    },
+    {
+      questionText: "Learning is except:",
+      options: [
+        "Self-directed",
+        "Self-activity",
+        "Not transferable",
+        "Creative"
+      ],
+      correctAnswer: "Not transferable"
+    },
+    {
+      questionText: "The most recognized learning theory in education is:",
+      options: [
+        "Bloom’s taxonomy",
+        "Motivational theory",
+        "Theory of avoidance",
+        "None of these"
+      ],
+      correctAnswer: "Bloom’s taxonomy"
+    },
+    {
+      questionText: "Affective domain of learning includes:",
+      options: [
+        "Attitude, values, interest and appreciation",
+        "Attitude, moral, interest and appreciation",
+        "Attitude, moral and appreciation",
+        "Attitude, values and interest"
+      ],
+      correctAnswer: "Attitude, values, interest and appreciation"
+    },
+    {
+      questionText: "Transformation learning process is:",
+      options: [
+        "Based on learning by doing",
+        "Make sense of other life experiences",
+        "Make sense and people’s own life experiences",
+        "Based on cognitive values"
+      ],
+      correctAnswer: "Make sense and people’s own life experiences"
+    },
+    {
+      questionText: "Education is dependent on:",
+      options: [
+        "Anthropology",
+        "Sociology",
+        "Philosophy",
+        "Geography"
+      ],
+      correctAnswer: "Philosophy"
+    },
+    {
+      questionText: "The objectives of lesson plan should be:",
+      options: [
+        "Learner oriented",
+        "Teacher oriented",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      correctAnswer: "Learner oriented"
+    },
+    {
+      questionText: "The learning domains of Bloom’s taxonomy are:",
+      options: [
+        "Cognitive and psychomotor",
+        "Alternative and cognitive",
+        "Cognitive, affective and psychomotor",
+        "Psychomotor and effective"
+      ],
+      correctAnswer: "Cognitive, affective and psychomotor"
+    },
+    {
+      questionText: "Central objective is also known as:",
+      options: [
+        "Specific objective",
+        "Departmental objective",
+        "Institution objective",
+        "Main objective"
+      ],
+      correctAnswer: "Institution objective"
+    },
+    {
+      questionText: "The maxims of learning is:",
+      options: [
+        "Known to unknown",
+        "Concrete to abstract",
+        "Sample to complex",
+        "All of these"
+      ],
+      correctAnswer: "All of these"
+    },
+    {
+      questionText: "The stages of learning are:",
+      options: [
+        "Cognitive, associate and disassociate",
+        "Cognitive, autonomous and captive",
+        "Cognitive, associative and autonomous",
+        "Cognitive, associative and behavior"
+      ],
+      correctAnswer: "Cognitive, associative and autonomous"
+    }
+  ]
     },
     {
       unitName: "Unit 2: Assessment and Planning",
