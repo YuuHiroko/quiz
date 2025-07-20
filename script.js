@@ -1,7 +1,7 @@
-// Nursing Education MCQ Data: All 8 units (sample fill, complete Units 1 & 2 as per PDF)
+// ==================== NURSING EDUCATION MCQ DATA (UNITS 1–8) ====================
 const unitsData = {
   "Nursing Education": [
-    // -------- UNIT 1 --------
+    // ---------- UNIT 1 ----------
     {
       unitName: "Unit 1: Introduction to Theoretical Foundations",
       questions: [
@@ -127,7 +127,7 @@ const unitsData = {
         },
         {
           questionText: "Central objective is also known as:",
-            options: [
+          options: [
             "Specific objective",
             "Departmental objective",
             "Institution objective",
@@ -157,7 +157,7 @@ const unitsData = {
         }
       ]
     },
-    // -------- UNIT 2 --------
+    // ---------- UNIT 2 ----------
     {
       unitName: "Unit 2: Assessment and Planning",
       questions: [
@@ -463,7 +463,7 @@ const unitsData = {
         }
       ]
     },
-    // --------- Unit 3–8: Use your existing structure, fill with MCQs as needed ---------
+    // ---------- UNIT 3–8: FILL THESE BLOCKS IN THIS FORMAT ----------
     { unitName: "Unit 3: Implementation", questions: [ /* ... */ ] },
     { unitName: "Unit 4: Teaching in the Clinical Setting", questions: [ /* ... */ ] },
     { unitName: "Unit 5: Educational/Teaching Media", questions: [ /* ... */ ] },
@@ -473,7 +473,7 @@ const unitsData = {
   ]
 };
 
-// Progressive unlock: state in localStorage
+// -- State stored in localStorage (progressive unlocking, completed units)
 const UNLOCK_KEY = "ne_mcq_units_unlocked";
 const COMPLETE_KEY = "ne_mcq_units_completed";
 
@@ -484,7 +484,6 @@ function initUnitProgress() {
   if (!Array.isArray(completed) || completed.length !== 8) completed = [false, false, false, false, false, false, false, false];
   return { unlocked, completed };
 }
-
 function saveUnitProgress(unlocked, completed) {
   localStorage.setItem(UNLOCK_KEY, JSON.stringify(unlocked));
   localStorage.setItem(COMPLETE_KEY, JSON.stringify(completed));
@@ -496,6 +495,7 @@ let currentQuestionIdx = 0;
 let score = 0;
 let answers = [];
 
+// Main UI
 function showUnits() {
   const app = document.getElementById('app');
   app.innerHTML = '<h2>Units</h2><ul class="unit-list"></ul>';
@@ -505,7 +505,11 @@ function showUnits() {
     li.className = "unit";
     if (!unlocked[idx]) li.classList.add("locked");
     if (completed[idx]) li.classList.add("completed");
-    li.textContent = unit.unitName;
+    // --- MCQ count badge for this unit:
+    li.innerHTML = `
+      <span>${unit.unitName}</span>
+      <span class="mcq-count">${unit.questions.length} MCQs</span>
+    `;
     if (completed[idx]) li.title = "Completed! All answers correct.";
     else if (!unlocked[idx]) li.title = "Unlock this unit by scoring 100% on the previous unit.";
     else li.title = "Start quiz for this unit";
@@ -515,8 +519,7 @@ function showUnits() {
     }
     list.appendChild(li);
   });
-
-  // New unit unlock banner for satisfaction
+  // Optional: Unlock banner
   if (unlocked.some((u, idx) => u && !completed[idx] && idx > 0 && !unlocked[idx-1])) {
     app.innerHTML += `
       <div style="margin-top:20px; background:linear-gradient(90deg,#cdf9e7,#f1fff9 80%);
@@ -535,7 +538,6 @@ function startQuiz(unitIdx) {
   answers = [];
   showQuestion();
 }
-
 function showQuestion() {
   const unit = unitsData["Nursing Education"][currentUnitIdx];
   const question = unit.questions[currentQuestionIdx];
@@ -555,7 +557,6 @@ function showQuestion() {
     document.getElementById('options').appendChild(btn);
   });
 }
-
 function submitAnswer(selected) {
   const unit = unitsData["Nursing Education"][currentUnitIdx];
   const question = unit.questions[currentQuestionIdx];
@@ -573,12 +574,10 @@ function submitAnswer(selected) {
     showResult();
   }
 }
-
 function showResult() {
   const unit = unitsData["Nursing Education"][currentUnitIdx];
   const app = document.getElementById('app');
   const isPerfect = score === unit.questions.length;
-  // Update unlock/completion state
   completed[currentUnitIdx] = isPerfect;
   if (isPerfect && currentUnitIdx < 7 && !unlocked[currentUnitIdx + 1]) {
     unlocked[currentUnitIdx + 1] = true;
@@ -586,9 +585,9 @@ function showResult() {
   saveUnitProgress(unlocked, completed);
 
   let comment = isPerfect ? "Perfect! This unit is complete and the next is unlocked." :
-                score / unit.questions.length > 0.8 ? "Excellent! Try again for a perfect score and unlock the next unit." :
-                score / unit.questions.length > 0.6 ? "Good effort. Try to master all questions for progress." :
-                "Keep practicing! Review the correct answers below.";
+    score / unit.questions.length > 0.8 ? "Excellent! Try again for a perfect score and unlock the next unit." :
+    score / unit.questions.length > 0.6 ? "Good effort. Try to master all questions for progress." :
+    "Keep practicing! Review the correct answers below.";
 
   app.innerHTML = `
     <div class="score-card">
@@ -621,7 +620,6 @@ function showResult() {
   `;
 }
 
-// Bootstrap
 window.showUnits = showUnits;
 window.startQuiz = startQuiz;
 document.addEventListener("DOMContentLoaded", showUnits);
