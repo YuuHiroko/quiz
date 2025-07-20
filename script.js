@@ -1184,7 +1184,6 @@ const unitsData = {
     }
   ]
 };
-
 // -- State stored in localStorage (progressive unlocking, completed units)
 const UNLOCK_KEY = "ne_mcq_units_unlocked";
 const COMPLETE_KEY = "ne_mcq_units_completed";
